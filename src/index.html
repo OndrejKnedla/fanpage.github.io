@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/img/fa.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../dist/output.css">
+    <!-- Tailwind css video js -->
+    <script src=”https://cdn.tailwindcss.com”></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jezdici okno -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Dj BoBo CZ/SK</title>
+    <!-- modal email -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <!-- nav -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+</head>
+
+<body>
+
+        <!-- start navigace -->
+        <!-- <header class="relative h-screen bg-gradient-to-b from-blue-700 to-black bg-cover bg-center"> -->
+
+            <nav class="fixed top-0 w-full z-50 flex flex-box justify-between items-center bg-black h-24">
+                <div class="ml-8">
+                    <img class="w-40 " src="../public/img/evolution_logo_djbobo-1.png" alt="">
+                </div>
+                <div class="hidden xl:inline">
+                    <ul class="flex flex-row space-x-1 mr-80 text-xl text-white font-bold">
+                        <!-- <a href="index.html" class="py-1 px-2 text-white hover:bg-blue-600 rounded-xl cursor-pointer">Aktuality</a> -->
+                        <!-- <a href="index.html" class="py-1 px-2 text-white hover:bg-blue-600 rounded-xl cursor-pointer">Předplatné</a>  -->
+                        <!-- <a href="page1.html" class="py-1 px-2 text-white hover:bg-blue-600 rounded-xl cursor-pointer">Ostrava 2023</a>
+                        <a href="merch.html" class="py-1 px-2 text-white hover:bg-blue-600 rounded-xl cursor-pointer">Merch</a> -->
+                        <!-- <a href="page1.html" class="py-1 px-2 text-white hover:bg-blue-600 rounded-xl cursor-pointer">TOP 10</a> -->
+                        <!-- <a href="page1.html" class="py-1 px-2 text-white hover:bg-blue-600 rounded-xl cursor-pointer">Koncerty</a> -->
+                        <a href="https://www.facebook.com/groups/djbobofanclubczsk" target="_blank" onclick="return openNewWindow(this)"><img class="w-10" src="../public/img/facebook.png" alt=""></a>
+                        <a href="https://www.instagram.com/djbobofanklub/" target="_blank" onclick="return openNewWindow(this)"><img class="w-10" src="../public/img/instagram.png" alt=""></a>
+                    </ul>
+                </div>
+                    <div class="font-sans">
+                        <ul class="flex flex-row space-x-1 mr-2  text-white font-serif">
+                            <a href="index.html" class="cursor-pointer hover:rounded-xl hover:bg-blue-600 py-1 px-2">ÚVOD</a>
+                            <a href="page1.html" class="cursor-pointer hover:rounded-xl hover:bg-blue-600 py-1 px-2">FOTKY</a>
+                            <a href="page2.html" class="cursor-pointer hover:rounded-xl hover:bg-blue-600 py-1 px-2">BIO</a>
+                            <a href="index.html" class="cursor-pointer hover:rounded-xl hover:bg-blue-600 py-1 px-2">PŘEDPLATNÉ</a>
+                            <a href="merch.html" class="cursor-pointer hover:rounded-xl hover:bg-blue-600 py-1 px-2">E-SHOP</a>
+                            <a href="contact.html" class="cursor-pointer hover:rounded-xl hover:bg-blue-600 py-1 px-2">KONTAKT</a>
+                        </ul>
+                    </div>
+            </nav>
+        </header>    
+        <!-- konec navigace -->
+        <div class="">
+            <video class="object-scale-down " src="../public/video/dj-bobo-video.mp4" autoplay="{true}" loop muted
+            className="absolute z-0 w-auto min-w-full min-h-full max-w-none uppercase"></video>
+        </div>
+        <!-- modal email -->
+        <body class="bg-gray-100">
+            <div id="myModalBackdrop" class="modal-backdrop hidden fixed inset-0 bg-black opacity-0 cursor-pointer"></div>
+                  
+            <div id="myModal" class="modal hidden fixed inset-0 flex items-center justify-center overflow-hidden">
+                <div class="modal-content bg-white p-8 rounded shadow-md relative">
+                    <span id="closeModalBtn" class="close absolute top-0 right-0 p-4 cursor-pointer">&times;</span>
+                    <h2 class="text-xl mb-4">Chcete být jedním z prvních <br>
+                        být informováni o dalším turné? <br>
+                        Pak se zaregistrujte zde!</h2>
+                    <form id="emailForm" class="space-y-4" action="connect.php" method="post">
+                        <input type="email" id="emailInput" placeholder="Váš e-mail" required class="w-full p-2 border rounded">
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" id="subscribeCheckbox" class="form-checkbox">
+                            <span>Ano, chci dostávat e-mailový zpravodaj. <br>Tento souhlas mohu kdykoli odvolat.</span>
+                        </label>
+                        <label class="flex items-center space-x-2">
+                            <input type="checkbox" id="privacyPolicyCheckbox" class="form-checkbox">
+                            <span>Ano, přečetl/a jsem si informace o ochraně<br> osobních údajů a souhlasím s nimi.</span>
+                        </label>
+                        <div id="errorText" class="hidden text-red-500">Pro odeslání formuláře je nutné <br> zaškrtnout obě políčka.</div>
+                        <button type="submit" class="w-full p-2 bg-blue-500 text-white rounded font-bold">Odeslat</button>
+                    </form>
+                </div>
+            </div>
+                  
+            <div id="successPopup" class="hidden fixed inset-0 flex items-center justify-center bg-green-300 bg-opacity-75">
+                <div class="p-8 bg-white rounded shadow-md">
+                    <p class="mb-4">Obdrželi jsme vaši žádost. <br> Nyní od nás obdržíte potvrzující e-mail na adresu: <span class="font-bold" id="popupEmail"></span>.</p>
+                    <p class="mb-4">Pokud e-mail neobdržíte, zkontrolujte <br> prosím složku spam ve své poštovní schránce! <br> E-maily od nás budete dostávat až po potvrzení.</p>
+                    <button id="closePopupBtn" class="p-2 bg-green-500 text-white rounded font-bold">Zavřít</button>
+                </div>
+            </div>
+        
+            <!-- Zde začíná vložený kód -->
+            <div id="myModal" class="modal hidden fixed inset-0 flex items-center justify-center overflow-hidden">
+                <div class="modal-content bg-white p-8 rounded shadow-md relative">
+                    <span id="closeModalBtn" class="close absolute top-0 right-0 p-4 cursor-pointer">&times;</span>
+                    <h2 class="text-xl mb-4">Chcete být informováni o dalším turné?</h2>
+                    <form id="emailForm" class="space-y-4" action="connect.php" method="post">
+                        <input type="email" id="emailInput" name="email" placeholder="Váš e-mail" required class="w-full p-2 border rounded">
+                        <div id="errorText" class="hidden text-red-500">Pro odeslání formuláře je nutné zaškrtnout políčko souhlasu s ochranou osobních údajů.</div>
+                        <button type="submit" class="w-full p-2 bg-blue-500 text-white rounded font-bold">Odeslat</button>
+                    </form>
+                </div>
+            </div>
+        <!-- modal end -->
+
+    <!-- <div class="container text-center">
+        <div id="floatingWindow" class=" fixed top-[450px] z-50 bottom-0 flex flex-col items-center w-full lg:flex-row lg:justify-center lg:space-x-4">
+           <a href="merch.html"> <button class="uppercase bg-blue-600 w-80 text-white rounded-full h-10">Objednat</button> </a>
+           <a href="page2.html"> <button class="mt-2 lg:mt-0 uppercase bg-blue-950 w-80 text-white rounded-full h-10">Více informací</button> </a>
+        </div> -->
+    <!-- </div>
+    <div class="container">
+        <div id="floatingWind   ow" class="floating-window">
+          <p class="text-white bg-black">Zde je obsah pohyblivého okna.</p>
+        </div>
+      </div> -->
+      
+
+        <!-- <div class="absolute bottom-5 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white mx-auto animate-bounce">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+              </svg>              
+        </div> -->
+    </header>
+
+    
+
+    <section class="relative h-screen bg-gradient-to-b from-black to-blue-600 bg-cover bg-center ">
+
+        <div class=" text-center text-white font-custom">
+            <!-- <h1 class="text-[40px]">neco neco</h1> -->
+            <img class="w-[500px]  m-auto mb-10" src="../public/img/logo-dj.png" alt="">
+            <h1 class="text-xl font-custom text-center pl-80 pr-80";>
+               <span> 🎶 Vítejte v oficiálním fanklubu DJ BoBa pro Českou republiku a Slovensko! </span><br><br>
+               <span> 🕺 Zde se scházíme jako nadšenci této legendární hudební ikony, abychom sdíleli vzpomínky,</span> <span>novinky a nejlepší hity.</span> <br><br>
+                <span>🤝 Společně tvoříme komunitu, která miluje DJ BoBa a jeho nezaměnitelný přínos světové hudbě.</span>
+                <br><br>
+                <span>🚀Přidejte se k nám a buďte součástí této skvělé rodiny! 🚀</span></h1>
+        </div>
+        <!-- <div class="absolute bottom-20 flex flex-col items-center w-full lg:flex-row lg:justify-center lg:space-x-4">
+            <button class="uppercase bg-blue-600 w-80 text-white rounded-full h-10">Objednat</button>
+            <button class="mt-2 lg:mt-0 uppercase bg-blue-950 w-80 text-white rounded-full h-10">Více informací</button>
+        </div> -->
+        <div class="absolute bottom-5 w-full">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white mx-auto animate-bounce">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+              </svg>              
+        </div>
+    </section>
+
+<section class="relative h-screen bg-[url(../public/img/dj-4.jpg)] bg-cover bg-center">
+
+    <!-- <div class="pt-32 text-center text-white">
+        <h1 class="text-[40px]">neco neco</h1>
+        <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, corrupti.</p>
+    </div> -->
+    <!-- <div class="absolute bottom-20 flex flex-col items-center w-full lg:flex-row lg:justify-center lg:space-x-4">
+        <button class="uppercase bg-blue-600 w-80 text-white rounded-full h-10">Objednat</button>
+        <button class="mt-2 lg:mt-0 uppercase bg-blue-950 w-80 text-white rounded-full h-10">Více informací</button>
+    </div> -->
+    <!-- <div class="absolute bottom-5 w-full">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white mx-auto animate-bounce">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5" />
+          </svg>              
+    </div> -->
+    
+</header>   
+</section>
+
+<!-- footer -->
+<section class="relative bg-black bg-cover bg-center h-64">
+    <div class=" text-white p-10">
+            <div class="text-center">
+            <a href="https://www.facebook.com/groups/djbobofanclubczsk"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/djbobofanklub/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/groups/djbobofanclubczsk"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.facebook.com/groups/djbobofanclubczsk"><i class="fa-brands fa-google-plus"></i></a>
+            <a href="https://www.facebook.com/groups/djbobofanclubczsk"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="">
+            <ul class="">
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="page1.html">Fotky</a></li>
+                <li><a href="page2.html">BIO</a></li>
+                <li><a href="merch.html">E-SHOP</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="footerBottom text-center">
+            <p>Copyright &copy;2023; Vytvořilo webové studio Ondřej Knedla</p>
+        </div>
+        </div>
+</section>
+
+
+<script>
+    const backgroundVideo = document.getElementById('background-video');
+    const backgroundAudio = document.getElementById('background-audio');
+  
+    // Spustit video a zvuk
+    backgroundVideo.play();
+    backgroundAudio.play();
+  
+    // Přidat posluchač události pro případ, že uživatel ztlumí zvuk na zařízení
+    document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('click', () => {
+        backgroundAudio.muted = false;
+      });
+    });
+  </script>
+  <script>
+    function onToggleMenu(icon) {
+        // Implement your functionality to open/close the menu here
+    }
+</script>
+
+  <script>
+    function openNewWindow(link) {
+        window.open(link.href, "_blank");
+        return false; // Zamezí výchozímu chování odkazu
+    }
+    </script>
+    <!-- modal email -->
+    <script>
+        function onToggleMenu(icon) {
+            // Zde implementujte funkcionalitu pro otevření/zavření menu
+        }
+        // Zde můžete přidat další JavaScriptový kód podle vašich potřeb
+    </script>
+    <script src="modal.js"></script>
+    <!--  -->
+    <script src="script.js"></script>
+    <!-- nav script -->
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
+    <!-- f5,refresh up -->
+    <script>
+        // Získat reference na modální prvky
+        const modalBackdrop = document.getElementById('myModalBackdrop');
+        const modals = document.querySelectorAll('.modal');
+        const closeModalBtns = document.querySelectorAll('.close');
+    
+        // Funkce pro zavření modálních oken
+        function closeModal() {
+            modalBackdrop.classList.add('hidden');
+            modals.forEach(modal => modal.classList.add('hidden'));
+        }
+    
+        // Naslouchat na kliknutí na pozadí a na tlačítko pro zavření
+        modalBackdrop.addEventListener('click', closeModal);
+        closeModalBtns.forEach(btn => {
+            btn.addEventListener('click', closeModal);
+        });
+    
+        // Naslouchat na stisk klávesy "Escape" (Esc)
+        document.addEventListener('keydown', event => {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/img/fa.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../dist/output.css">
+    <!-- Tailwind css video js -->
+    <script src=”https://cdn.tailwindcss.com”></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- footer -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jezdici okno -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Dj BoBo CZ/SK</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="bg-gradient-to-r from-blue-950 to-black">
+        <div class="xl:px-20 md:px-10 sm:px-6 px-4 md:py-12 py-9 2xl:mx-auto 2xl:container md:flex items-center justify-center">
+            <div class=" md:hidden sm:mb-8 mb-6">
+               <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg1.svg" alt="logo">
+            </div>
+            <div class="bg-white shadow-lg rounded xl:w-1/3 lg:w-5/12 md:w-1/2 w-full lg:px-10 sm:px-6 sm:py-10 px-2 py-6">
+                <p tabindex="0" class="focus:outline-none text-2xl font-extrabold leading-6 text-gray-800">Přihlášení k účtu</p>
+                <p tabindex="0" class="focus:outline-none text-sm mt-4 font-medium leading-none text-gray-500">Nemáte účet? <a href="javascript:void(0)" class="hover:text-gray-500 focus:text-gray-500 focus:outline-none focus:underline hover:underline text-sm font-medium leading-none text-gray-800 cursor-pointer"> Zaregistrujte se zde!</a></p>
+                <button aria-label="Continue with google" role="button" class="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 p-3 border rounded-lg border-gray-700 flex items-center w-full mt-10 hover:bg-gray-100">
+                   <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg2.svg" alt="google">
+                    <p class="text-base font-medium ml-4 text-gray-700">Pokračovat s Google</p>
+                </button>
+                <button aria-label="Continue with facebook" role="button" class="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 p-3 border rounded-lg border-gray-700 flex items-center w-full mt-4 hover:bg-gray-100">
+                   <img class="w-6" src="../public/img/facebook.png" alt="facebook">
+                    <p class="text-base font-medium ml-4 text-gray-700">Pokračovat s Facebookem</p>
+                </button>
+                <button aria-label="Continue with twitter" role="button" class="focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-gray-700 p-3 border rounded-lg border-gray-700 flex items-center w-full mt-4 hover:bg-gray-100">
+                  <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg4.svg" alt="twitter">
+                    <p class="text-base font-medium ml-4 text-gray-700">Pokračovat s Twitter</p>
+                </button>
+                <div class="w-full flex items-center justify-between py-5">
+                    <hr class="w-full bg-gray-400" />
+                    <p class="text-base font-medium leading-4 px-2.5 text-gray-500">NEBO</p>
+                    <hr class="w-full bg-gray-400" />
+                </div>
+                <div>
+                    <label for="email" class="text-sm font-medium leading-none text-gray-800"> Email </label>
+                    <input id="email" aria-labelledby="email" type="email" class="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2" placeholder="například: jananovakova@seznam.cz " />
+                </div>
+                <div class="mt-6 w-full">
+                    <label for="myInput" class="text-sm font-medium leading-none text-gray-800"> Heslo </label>
+                    <div class="relative flex items-center justify-center">
+                        <input id="myInput" type="password" class="bg-gray-200 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2" />
+                        <div class="absolute right-0 mt-2 mr-3 cursor-pointer" onclick="showPassword()">
+                            <div id="show">
+                              <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg5.svg" alt="eye">
+                            </div>
+                            <div id="hide" class="hidden">
+                              <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg6.svg" alt="eye">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <button role="button" class="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-semibold leading-none text-white focus:outline-none bg-indigo-700 border rounded hover:bg-indigo-600 py-4 w-full">Vytvořit můj účet</button>
+                </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 lg:ml-16 ml-8 md:mt-0 mt-6">
+                <div class="pl-8 md:block hidden">
+                    <img src="../public/img/evolution_logo_djbobo-1.png" alt="logo">
+                </div>
+                <div class="flex items-start mt-8">
+                    <div>
+                       <img class="w-24" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/sign_in_2-svg7.svg" alt="quote">
+                    </div>
+                    <p class="sm:text-2xl text-xl leading-7 text-white pl-2.5">Nebuďte pozadu! Přihlaste se a nechte si přinést všechny aktuality o DJ Bobovi přímo k vám. Sledujte jeho hudbu, události a projekty jako první. Připojte se k jeho hudební komunitě a buďte v obraze!"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+    <script src="script.js"></script>
+
+</body>
+</html>
